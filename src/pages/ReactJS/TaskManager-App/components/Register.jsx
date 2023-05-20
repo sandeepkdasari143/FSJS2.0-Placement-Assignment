@@ -1,9 +1,70 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useReducer, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { REGISTER } from "../../../../redux-features/reducers/authentication";
 
-function Register() {
+//Initial State
+const initialState = {
+    email: '',
+    password: '',
+}
+
+//Register Reducer Function
+const registerReducer = (state, action) => {
+    switch (action.type) {
+        case 'MODIFY_INPUT_FIELD':
+            return {
+                ...state,
+                [action.field]: action.value,
+            };
+        default:
+            return state;
+    }
+}
+
+const Register = () => {
+
+    const reduxDispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const [state, dispatch] = useReducer(registerReducer, initialState)
+    const handleInputFieldChange = (event) => {
+        const { name, value } = event.target;
+        dispatch({
+            type: 'MODIFY_INPUT_FIELD',
+            field: name,
+            value: value,
+        })
+    }
+
+    //Register an user
+    const handleRegister = async (event) => {
+        event.preventDefault();
+        
+        const FETCH_URL = `https://reqres.in/api/register`;
+        const POST_OPTIONS = {
+            method: 'POST',
+            body: JSON.stringify({
+                email: state.email,
+                password: state.password
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        }
+
+        const registerRequest = new Request(FETCH_URL, POST_OPTIONS);
+        try {
+            const response = await fetch(registerRequest);
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.log(error.message)
+        }
+    };
+
     return (
-        <div className="w-full">
+        <div className="basis-[85%]">
             <div className="w-full h-[300px] bg-[rgb(27,27,39)] border-b border-[rgb(39,41,58)]"></div>
             <div className="relative -top-[450px] min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div className="text-center text-2xl font-bold pt-5">
@@ -20,7 +81,7 @@ function Register() {
                 </div>
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="border-[rgb(39,41,58)] bg-[rgb(39,41,58)] py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" onSubmit={handleRegister}>
                     <div>
                                         <label
                                         htmlFor="email"
@@ -33,7 +94,9 @@ function Register() {
                                             id="email"
                                             name="email"
                                             type="email"
-                                            className="bg-[rgb(22,22,34)] focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
+                                            value = {state.email}
+                                            onChange = {handleInputFieldChange}
+                                            className="bg-transparent focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
                                         />
                                         </div>
                                     </div>
@@ -50,9 +113,10 @@ function Register() {
                                             id="password"
                                             name="password"
                                             type="password"
-                                            autoComplete="current-password"
+                                            value = {state.password}
+                                            onChange = {handleInputFieldChange}
                                             required
-                                            className="bg-[rgb(22,22,34)] focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
+                                            className="bg-transparent focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
                                         />
                                         </div>
                                     </div>
