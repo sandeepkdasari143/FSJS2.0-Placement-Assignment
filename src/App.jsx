@@ -14,10 +14,33 @@ import TicTacToe from './pages/ReactJS/Tic-Tac-Toe-App/TicTacToe';
 import AuthProtection from './pages/ReactJS/TaskManager-App/components/AuthProtection';
 import LogIn from './pages/ReactJS/TaskManager-App/components/LogIn';
 import Register from "./pages/ReactJS/TaskManager-App/components/Register";
+import themeContext from './contextAPI/ThemeContext';
 
 const App = () => {
+  const [theme, setTheme] = React.useState("dark");
+
+  //If the "theme" value of the context changes, then this useEffect will be called...
+  React.useEffect(()=>{
+    if(theme === "dark"){
+      document.documentElement.classList.add("dark");
+    }else{
+      document.documentElement.classList.remove("dark");
+    }
+  },[theme])
+
+  // For Browser Default Mode...
+  React.useEffect(()=>{
+
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark');
+    }else{
+      setTheme('light');
+    }
+    
+  },[])
   return (
     <>
+    <themeContext.Provider value={{theme, setTheme}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeLayout />}>
@@ -35,11 +58,11 @@ const App = () => {
             <Route path="/reactjs/taskManager/register" element={<Register />} />
 
             <Route path="/reactjs/ticTacToe" element={<TicTacToe />} />
-
             <Route path="/expressjs" element={<ExpressJS />} />
           </Route>
         </Routes>
       </BrowserRouter>
+    </themeContext.Provider>
     </>
   );
 }
