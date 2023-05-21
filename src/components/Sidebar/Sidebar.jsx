@@ -9,7 +9,7 @@ import home from './assets/house.png';
 
 const Sidebar = () => {
     return (
-        <div className='min-h-[92vh] flex justify-center basis-[15%] border-r border-[rgb(39,41,58)] bg-[rgb(245,245,251)] dark:bg-[rgb(20,20,31)]'>
+        <div className='min-h-[92vh] flex justify-center basis-[15%] border-r border-pink-300 dark:border-[rgb(39,41,58)] bg-[rgb(245,245,251)] dark:bg-[rgb(20,20,31)]'>
             <nav className='flex flex-col gap-3 m-3 basis-[90%] dark:text-[rgb(242,242,248)] text-[rgb(96,106,123)]'>
                 <NavLink className={styles.NavLink} to="/"><h1 className='flex items-center gap-2'><span><img src={home} alt="Home Logo" /></span>Home</h1></NavLink>
                 <NavLink className={styles.NavLink} to="/html5"><h1 className='flex items-center gap-2'><span><img src={html} alt="HTML5 Logo" /></span>HTML5</h1></NavLink>
@@ -31,7 +31,7 @@ const Sidebar = () => {
 }
 
 const styles = {
-    NavLink: "px-3 py-2 text-[14px] font-semibold rounded-md border border-[rgb(39,41,58)] focus:bg-[rgb(39,41,58)] focus:text-white",
+    NavLink: "px-3 py-2 text-[14px] font-semibold rounded-md border border-pink-300 dark:border-[rgb(39,41,58)] focus:bg-[rgb(39,41,58)] focus:text-white",
 }
 
 export default Sidebar
