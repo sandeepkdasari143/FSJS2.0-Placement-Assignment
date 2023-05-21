@@ -29,15 +29,15 @@ const App = () => {
   },[theme])
 
   // For Browser Default Mode...
-  // React.useEffect(()=>{
+  React.useEffect(()=>{
 
-  //   if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-  //     setTheme('dark');
-  //   }else{
-  //     setTheme('light');
-  //   }
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark');
+    }else{
+      setTheme('light');
+    }
     
-  // },[])
+  },[])
   return (
     <>
     <themeContext.Provider value={{theme, setTheme}}>
@@ -58,7 +58,6 @@ const App = () => {
             <Route path="/reactjs/taskManager/register" element={<Register />} />
 
             <Route path="/reactjs/ticTacToe" element={<TicTacToe />} />
-
             <Route path="/expressjs" element={<ExpressJS />} />
           </Route>
         </Routes>
