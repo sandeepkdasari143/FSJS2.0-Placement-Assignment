@@ -84,24 +84,24 @@ const LogIn = () => {
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="border-[rgb(39,41,58)] bg-[rgb(39,41,58)] py-8 px-4 shadow sm:rounded-lg sm:px-10">
                     <form className="space-y-6" onSubmit={handlelogin}>
-                    <div>
-                                        <label
-                                        htmlFor="email"
-                                        className="block text-sm font-medium text-white"
-                                        >
-                                        Email address
-                                        </label>
-                                        <div className="mt-1">
-                                        <input
-                                            id="email"
-                                            name="email"
-                                            type="email"
-                                            value = {state.email}
-                                            onChange = {handleInputFieldChange}
-                                            className="bg-transparent focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
-                                        />
-                                        </div>
-                                    </div>
+                        <div>
+                            <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-white"
+                            >
+                                Email address
+                            </label>
+                            <div className="mt-1">
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    value = {state.email}
+                                    onChange = {handleInputFieldChange}
+                                    className="bg-transparent focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
+                                />
+                            </div>
+                        </div>
 
                                     <div>
                                         <label
