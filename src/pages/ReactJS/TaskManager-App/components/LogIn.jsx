@@ -66,7 +66,7 @@ const LogIn = () => {
     };
 
     return (
-        <div className="basis-[85%]">
+        <div className="bg-red-500 basis-[85%]">
             <div className="w-full h-[300px] bg-[rgb(27,27,39)] border-b border-[rgb(39,41,58)]"></div>
             <div className="relative -top-[450px] min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div className="text-center text-2xl font-bold pt-5">
