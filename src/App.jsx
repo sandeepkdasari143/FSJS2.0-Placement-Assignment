@@ -1,19 +1,22 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeLayout from './HomeLayout/HomeLayout'
+
+import Home from './pages/Home/Home';
 import HTML5 from './pages/HTML5/HTML5';
 import CSS3 from './pages/CSS3/CSS3';
 import JavaScriptES6 from './pages/Javascript/JavaScriptES6';
-import ReactJS from './pages/ReactJS/ReactJS';
-import ExpressJS from './pages/ExpressJS/ExpressJS';
-import Home from './pages/Home/Home';
-import Calculator from './pages/ReactJS/Calculator-App/Calculator';
-import ToDo from './pages/ReactJS/ToDo-App/ToDo';
-import TaskManager from './pages/ReactJS/TaskManager-App/TaskManager';
-import TicTacToe from './pages/ReactJS/Tic-Tac-Toe-App/TicTacToe';
+
+import ReactJS from './pages/ReactJS/';
+import Calculator from './pages/ReactJS/Calculator-App';
+import ToDo from './pages/ReactJS/ToDo-App';
+import TicTacToe from './pages/ReactJS/Tic-Tac-Toe-App';
+import TaskManager from './pages/ReactJS/TaskManager-App';
 import AuthProtection from './pages/ReactJS/TaskManager-App/components/AuthProtection';
 import LogIn from './pages/ReactJS/TaskManager-App/components/LogIn';
 import Register from "./pages/ReactJS/TaskManager-App/components/Register";
+import ExpressJS from './pages/ExpressJS/ExpressJS';
+
 import themeContext from './contextAPI/ThemeContext';
 
 const App = () => {

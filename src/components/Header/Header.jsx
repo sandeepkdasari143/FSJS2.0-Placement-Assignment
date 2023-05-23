@@ -8,13 +8,12 @@ import themeContext from '../../contextAPI/ThemeContext';
 
 const Header = () => {
     const {theme, setTheme} = React.useContext(themeContext);
-    const [number, setNumber] = React.useState(1);
     React.useEffect(()=>setTheme('light'),[])
     return (
-        <header className='flex items-center justify-between h-[8vh] px-3 border-b border-[rgb(39,41,58)]'>
+        <header className='flex items-center justify-between h-[8vh] px-3 border-b border-pink-300 dark:border-[rgb(39,41,58)]'>
             <Link to="/" className='flex items-center gap-1 cursor-pointer text-[rgb(240,46,101)]'>
                 <DynamicFormTwoToneIcon />
-                <h1 className='font-thin text-2xl'>iNeuron <span className='font-bold'>FSJS2.0</span></h1>
+                <h1 className='font-md text-2xl'>iNeuron <span className='font-bold'>FSJS2.0</span></h1>
             </Link>
             <ThemeSwitch theme={theme} setTheme={setTheme}/>
             {/* <Link to='/reactjs'>React</Link> */}

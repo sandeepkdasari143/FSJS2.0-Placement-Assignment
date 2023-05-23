@@ -3,19 +3,19 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { LOGIN } from "../../../../redux-features/reducers/authentication";
 
-//Initial State
+
 const initialState = {
     email: '',
     password: '',
 }
 
-//login Reducer Function
+
 const loginReducer = (state, action) => {
     switch (action.type) {
         case 'MODIFY_INPUT_FIELD':
             return {
                 ...state,
-                [action.field]: action.value,
+                [action.payload.field]: action.payload.value,
             };
         default:
             return state;
@@ -32,8 +32,10 @@ const LogIn = () => {
         const { name, value } = event.target;
         dispatch({
             type: 'MODIFY_INPUT_FIELD',
-            field: name,
-            value: value,
+            payload: {
+                field: name,
+                value: value,
+            }
         })
     }
 
@@ -66,10 +68,10 @@ const LogIn = () => {
     };
 
     return (
-        <div className="bg-red-500 basis-[85%]">
-            <div className="w-full h-[300px] bg-[rgb(27,27,39)] border-b border-[rgb(39,41,58)]"></div>
+        <div className="bg-[rgb(245,245,251)] dark:bg-[rgb(20,20,31)] basis-[85%]">
+            <div className="w-full h-[300px] bg-pink-100 dark:bg-[rgb(27,27,39)] border-b dark:border-[rgb(39,41,58)]"></div>
             <div className="relative -top-[450px] min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-                <div className="text-center text-2xl font-bold pt-5">
+                <div className="text-center text-2xl font-bold pt-5 dark:text-white">
                 LogIn <br />
                 <span className="text-sm font-normal">
                     Already have an acount?{" "}
@@ -82,12 +84,12 @@ const LogIn = () => {
                 </span>
                 </div>
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-                <div className="border-[rgb(39,41,58)] bg-[rgb(39,41,58)] py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                <div className="dark:border-[rgb(39,41,58)] border-pink-300 bg-[rgb(245,245,251)] dark:bg-[rgb(39,41,58)] py-8 px-4 shadow sm:rounded-lg sm:px-10">
                     <form className="space-y-6" onSubmit={handlelogin}>
                         <div>
                             <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-white"
+                            className="block text-sm font-medium text-[rgb(240,46,101)]"
                             >
                                 Email address
                             </label>
@@ -95,10 +97,11 @@ const LogIn = () => {
                                 <input
                                     id="email"
                                     name="email"
-                                    type="email"
+                                        type="email"
+                                        placeholder="Enter email address..."
                                     value = {state.email}
                                     onChange = {handleInputFieldChange}
-                                    className="bg-transparent focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
+                                    className="bg-transparent dark:focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-[rgb(107,114,128)] rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-[rgb(240,46,101)] sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -106,19 +109,20 @@ const LogIn = () => {
                                     <div>
                                         <label
                                         htmlFor="password"
-                                        className="block text-sm font-medium text-white"
+                                        className="block text-sm font-medium text-[rgb(240,46,101)]"
                                         >
                                         Password
                                         </label>
                                         <div className="mt-1">
                                         <input
                                             id="password"
-                                            name="password"
+                                        name="password"
+                                        placeholder="Enter password"
                                             type="password"
                                             value = {state.password}
                                             onChange = {handleInputFieldChange}
                                             required
-                                            className="bg-transparent focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-pink-800 sm:text-sm"
+                                            className="bg-transparent dark:focus:bg-[rgba(22,22,34,0.6)] appearance-none block w-full px-3 py-2 border border-[rgb(107,114,128)] rounded-md shadow-sm placeholder-gray-300 focus:outline-none focus:border-[rgb(240,46,101)] sm:text-sm"
                                         />
                                         </div>
                                     </div>
