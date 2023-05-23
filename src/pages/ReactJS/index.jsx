@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { reactQnA } from "../../mock-data/react-js/react-js-qna";
+import { reactQnA } from "../../mock-data/react-js-qna";
 
 const ReactJS = () => {
   return (
@@ -22,6 +22,7 @@ const ReactJS = () => {
                         className="text-sm text-[rgba(240,46,101,0.8)]"
                         key={index}
                       >
+                        {"- "}
                         {subqna}
                       </li>
                     );
