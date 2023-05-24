@@ -7,6 +7,7 @@ import {
   SET_TASKS,
 } from "./TaskManager.actions";
 import TaskForm from "./TaskForm";
+import TaskManagerHeader from "./components/TaskManagerHeader";
 
 const TaskManager = () => {
   const [state, dispatch] = React.useReducer(
@@ -79,7 +80,8 @@ const TaskManager = () => {
 
   return (
     <main className="relative min-h-[92vh] flex flex-col basis-[85%] bg-[rgb(245,245,251)] dark:bg-[rgb(20,20,31)]">
-      <section className="w-[100%] dark:bg-[rgb(27,27,39)] bg-pink-100 h-[30%] flex items-center justify-center">
+      <section className="w-[100%] dark:bg-[rgb(27,27,39)] bg-pink-100 h-[50%] flex flex-col gap-5 items-center justify-center">
+        <TaskManagerHeader />
         {/* Task Form */}
         <TaskForm
           addTask={addTask}
