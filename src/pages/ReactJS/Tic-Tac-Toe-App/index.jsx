@@ -79,7 +79,7 @@ class Game extends Component {
                         <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
                     </section>
                         
-                    <section className="dark:text-white w-[400px]">
+                    <section className="dark:text-white w-[400px] flex flex-col items-center">
                         <h1 className='font-bold text-5xl'>{status}
                             {winner === 'X' ?
                             <span className='font-bold text-5xl text-blue-600'>{winner}</span> :

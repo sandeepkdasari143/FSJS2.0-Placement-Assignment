@@ -16,8 +16,8 @@ import AuthProtection from './pages/ReactJS/TaskManager-App/components/AuthProte
 import LogIn from './pages/ReactJS/TaskManager-App/components/LogIn';
 import Register from "./pages/ReactJS/TaskManager-App/components/Register";
 import ExpressJS from './pages/ExpressJS/ExpressJS';
-
 import themeContext from './contextAPI/ThemeContext';
+import CounterApp from './pages/ReactJS/CounterApp';
 
 const App = () => {
   const [theme, setTheme] = React.useState("dark");
@@ -58,8 +58,8 @@ const App = () => {
 
             <Route path="/reactjs/taskManager" element={<AuthProtection><TaskManager /></AuthProtection>} />
             <Route path="/reactjs/taskManager/login" element={<LogIn />} />
-            <Route path="/reactjs/taskManager/register" element={<Register />} />
-
+              <Route path="/reactjs/taskManager/register" element={<Register />} />
+              <Route path="/reactjs/counter" element={<CounterApp />} />
             <Route path="/reactjs/ticTacToe" element={<TicTacToe />} />
             <Route path="/expressjs" element={<ExpressJS />} />
           </Route>

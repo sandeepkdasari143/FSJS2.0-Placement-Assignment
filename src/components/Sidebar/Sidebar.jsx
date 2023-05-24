@@ -19,6 +19,7 @@ const Sidebar = () => {
                     <h1 className='flex items-center gap-2'><span><img src={react} alt="React Logo" /></span>ReactJS</h1>
                     <nav className='flex flex-col'>
                         <NavLink className="px-3 py-2 text-[12px] rounded-md focus:bg-[rgb(39,41,58)] focus:text-white" to="/reactjs/calculator">Calculator App</NavLink>
+                        <NavLink className="px-3 py-2 text-[12px] rounded-md focus:bg-[rgb(39,41,58)] focus:text-white" to="/reactjs/counter">Counter App</NavLink>
                         <NavLink className="px-3 py-2 text-[12px] rounded-md focus:bg-[rgb(39,41,58)] focus:text-white" to="/reactjs/todo">ToDo App</NavLink>
                         <NavLink className="px-3 py-2 text-[12px] rounded-md focus:bg-[rgb(39,41,58)] focus:text-white" to="/reactjs/ticTacToe">Tic-Tac-Toe</NavLink>
                         <NavLink className="px-3 py-2 text-[12px] rounded-md focus:bg-[rgb(39,41,58)] focus:text-white" to="/reactjs/taskManager">Task Manager</NavLink>
