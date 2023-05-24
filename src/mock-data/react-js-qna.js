@@ -42,7 +42,7 @@ export const reactQnA = [
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q13-build-calculator-app-using-react-only'
     },{
         questionText: 'Q.14. Build a Tic Tac Toe Game using the Class Component of React.',
-        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q14-build-a-tic-tac-toe-game-using-the-class-component-of-react'
+        linkToAnswer: '/reactjs/ticTacToe'
     },{
         questionText: 'Q.15. Explain Prop Drilling & How can we avoid it?',
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q15-explain-prop-drilling-andamp-how-can-we-avoid-it'

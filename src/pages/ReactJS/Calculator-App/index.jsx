@@ -7,7 +7,7 @@ const Calculator = () => {
       <div className='w-[100%] dark:bg-[rgb(27,27,39)] bg-pink-100 h-[30%]'></div>
       <div className='w-[100%] h-[70%]'></div>
 
-      <div className='absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2'>
+      <div className='absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 dark:text-white'>
         <CalculatorApp />
       </div>
     </div>
