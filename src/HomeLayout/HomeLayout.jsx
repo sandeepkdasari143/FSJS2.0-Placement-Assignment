@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 
 const HomeLayout = () => {
     return (
-        <div className='h-[100vh] dark:bg-[rgb(20,20,31)] bg-[rgb(255,255,255)]'>
+        <div className='trasition-all duration-500 linear h-[100vh] dark:bg-[rgb(20,20,31)] bg-[rgb(255,255,255)]'>
             <Header />
             <div className='flex'>
                 <Sidebar />

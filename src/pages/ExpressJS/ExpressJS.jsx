@@ -10,7 +10,7 @@ const ExpressJS = () => {
             <Link
               key={index}
               target="blank"
-              className="trasition-all duration-700 linear p-3 font-semibold text-[rgb(240,46,101)] flex flex-col gap-1 justify-center w-[40%] bg-gray-800 rounded-md hover:scale-105"
+              className="trasition-all duration-700 linear p-3 font-semibold text-[rgb(240,46,101)] flex flex-col gap-1 justify-center w-[40%] bg-pink-100 dark:bg-gray-800 rounded-md hover:scale-105"
               to={qna.linkToAnswer}
             >
               <p className="">{qna.questionText}</p>
