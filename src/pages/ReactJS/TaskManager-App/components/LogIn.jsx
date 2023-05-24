@@ -77,7 +77,7 @@ const LogIn = () => {
                     Already have an acount?{" "}
                     <Link
                     className="text-[rgb(240,46,101)]"
-                    to="/reactjs/taskManager/register"
+                    to="#"
                     >
                     Register
                     </Link>
