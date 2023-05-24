@@ -2,7 +2,7 @@ import React from 'react'
 import DynamicFormTwoToneIcon from '@mui/icons-material/DynamicFormTwoTone';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { IconButton } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import ThemeSwitch from './ThemeSwitch';
 import themeContext from '../../contextAPI/ThemeContext';
 
@@ -15,7 +15,14 @@ const Header = () => {
                 <DynamicFormTwoToneIcon />
                 <h1 className='font-md text-2xl'>iNeuron <span className='font-bold'>FSJS2.0</span></h1>
             </Link>
-            <ThemeSwitch theme={theme} setTheme={setTheme}/>
+            <div className='flex px-5 gap-3 items-center'>
+                <Link title='Go To Source Code (GitHub Link)' target='blank' to={"https://github.com/sandeepkdasari143/FSJS2.0-Placement-Assignment/tree/master"}>
+                    <IconButton>
+                        <GitHubIcon className='dark:text-gray-400 text-pink-700'/>
+                    </IconButton>
+                </Link>
+                <ThemeSwitch theme={theme} setTheme={setTheme}/>
+            </div>
             {/* <Link to='/reactjs'>React</Link> */}
         </header>
     )

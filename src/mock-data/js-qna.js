@@ -50,6 +50,6 @@ export const jsQNA = [
     },{
         questionText: 'Q.12 Create a Blog web app using JavaScript',
         subQuestions: ['Fetch data from https://jsonplaceholder.typicode.com/posts and show it to ui', 'User can also add new blog', 'Add Delete functionality also'],
-        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/javascript-qa#heading-q12-create-a-blog-web-app-using-javascript'
+        linkToAnswer: 'http://pleasureblogging.fsjs2.0.sandeep.fun/'
     },
 ]
