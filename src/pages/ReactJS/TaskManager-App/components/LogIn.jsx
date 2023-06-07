@@ -2,6 +2,7 @@ import { useReducer} from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { LOGIN } from "../../../../redux-features/reducers/authentication";
+import GitHubButton from "../../../../components/GitHubButton";
 
 
 const initialState = {
@@ -70,7 +71,7 @@ const LogIn = () => {
     return (
         <div className="bg-[rgb(245,245,251)] dark:bg-[rgb(20,20,31)] basis-[85%]">
             <div className="w-full h-[300px] bg-pink-100 dark:bg-[rgb(27,27,39)] border-b dark:border-[rgb(39,41,58)]"></div>
-            <div className="relative -top-[450px] min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div className="relative -top-[450px] min-h-full flex flex-col items-center gap-3 justify-center py-12 sm:px-6 lg:px-8">
                 <div className="text-center text-2xl font-bold pt-5 dark:text-white">
                 LogIn <br />
                 <span className="text-sm font-normal">
@@ -81,8 +82,10 @@ const LogIn = () => {
                     >
                     Register
                     </Link>
-                </span>
+                    </span>
+                    <h1>CORS issue, Please Download my Code to See this result :)</h1>
                 </div>
+                    <GitHubButton to="https://github.com/sandeepkdasari143/FSJS2.0-Placement-Assignment/tree/master/src/pages/ReactJS/TaskManager-App" />
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="dark:border-[rgb(39,41,58)] border-pink-300 bg-[rgb(245,245,251)] dark:bg-[rgb(39,41,58)] py-8 px-4 shadow sm:rounded-lg sm:px-10">
                     <form className="space-y-6" onSubmit={handlelogin}>

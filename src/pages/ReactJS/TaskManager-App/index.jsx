@@ -8,6 +8,7 @@ import {
 } from "./TaskManager.actions";
 import TaskForm from "./TaskForm";
 import TaskManagerHeader from "./components/TaskManagerHeader";
+import TaskCard from "./components/TaskCard";
 
 const TaskManager = () => {
   const [state, dispatch] = React.useReducer(
@@ -90,13 +91,11 @@ const TaskManager = () => {
         />
       </section>
 
-      <section className="w-[100%] h-[70%] dark:text-white text-black">
+      <section className="w-[100%] h-[70%] dark:text-white text-black p-3">
         {/* Tasks Listing */}
-        <div>
-          {state.tasks.map((task) => {
-            return <article key={task.id}>{task.taskTitle}</article>;
+          {state.tasks?.map((task) => {
+            return <TaskCard key={task.id} />
           })}
-        </div>
       </section>
     </main>
   );
