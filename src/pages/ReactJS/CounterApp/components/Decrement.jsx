@@ -4,9 +4,8 @@ const Decrement = ({ value, setValue, setIsIncreased }) => {
         setIsIncreased(false);
     };
     return (
-        <div className="border-2 border-[#000] text-[18px] bg-transparent px-3 py-2 cursor-pointer rounded-md  hover:bg-[#000] hover:text-[#FAEBD7]">
-            <button onClick={handleDecrement}>DECREMENT</button>
-        </div>
+
+            <button className="px-3 py-2 border dark:border-white  border-gray-800 text-[18px] bg-transparent cursor-pointer rounded-md dark:text-white hover:bg-[#000] dark:hover:bg-white dark:hover:text-black hover:text-[#FAEBD7]" onClick={handleDecrement}>DECREMENT</button>
     );
 };
 

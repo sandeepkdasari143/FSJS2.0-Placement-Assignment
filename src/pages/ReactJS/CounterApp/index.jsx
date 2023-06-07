@@ -7,20 +7,20 @@ function CounterApp() {
     const [isIncreased, setIsIncreased] = useState(false);
 
     return (
-        <div className="bg-[#ecfdf1] h-[100vh] flex justify-center items-center">
-        <div className="flex flex-col space-y-10">
-            <p className="text-[40px] font-serif text-center lg:text-[40px]">
+        <div className="basis-[85%] flex justify-center items-center">
+        <div className="border dark:border-white/80 border-pink-800 rounded-xl p-3 flex flex-col space-y-10">
+            <p className="text-[40px] text-gray-800 dark:text-white/80 font-extrabold text-center lg:text-[40px]">
             Counter App
             </p>
             <div className="flex flex-col justify-center items-center space-y-8">
             <p
-                className="text-[#000] text-[50px] font-medium "
+                className="text-[50px] font-medium "
                 style={{
                 color: isIncreased
                     ? "green"
                     : isIncreased === false
                     ? "red"
-                    : "black",
+                    : "violet",
                 }}
             >
                 {value}
