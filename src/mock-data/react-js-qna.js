@@ -5,7 +5,7 @@ export const reactQnA = [
     },
     {
         questionText: "Q.2. What's Virtual DOM in React & What are its advantages of it?",
-        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q2-whats-virtual-dom-in-react-andamp-what-are-its-advantages-of-ithttps://sandeepkdasari.hashnode.dev/react-js-qa#heading-q2-whats-virtual-dom-in-react-andamp-what-are-its-advantages-of-it'
+        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q2-whats-virtual-dom-in-react-andamp-what-are-its-advantages-of-it'
     },{
         questionText: 'Q.3. Explain the Life Cycle of React Components.',
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q3-explain-the-life-cycle-of-react-components'
@@ -17,7 +17,7 @@ export const reactQnA = [
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q5-what-are-the-hooks-in-react-andamp-can-we-use-hooks-in-class-components'
     },{
         questionText: 'Q.6. What are the Life Cycle methods and their advantages of it?',
-        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q6-what-are-the-life-cycle-methods-and-their-advantages-of-it'
+        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q6-whathooks-are-features-in-react-that-allow-functional-components-to-have-state-and-use-other-react-features-without-using-class-components'
     },{
         questionText: "Q.7. What's useState Hook & Advantages of it?",
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q7-whats-usestate-hook-andamp-advantages-of-it'
@@ -42,7 +42,7 @@ export const reactQnA = [
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q13-build-calculator-app-using-react-only'
     },{
         questionText: 'Q.14. Build a Tic Tac Toe Game using the Class Component of React.',
-        linkToAnswer: '/reactjs/ticTacToe'
+        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q14-build-a-tic-tac-toe-game-using-the-class-component-of-react'
     },{
         questionText: 'Q.15. Explain Prop Drilling & How can we avoid it?',
         linkToAnswer: 'https://sandeepkdasari.hashnode.dev/react-js-qa#heading-q15-explain-prop-drilling-andamp-how-can-we-avoid-it'

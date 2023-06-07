@@ -1,7 +1,7 @@
 export const jsQNA = [
     {
         questionText: "Q.1 What is Hoisting in Javascript ?",
-        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/javascript-qa#heading-q1-what-is-hoisting-in-javascript'
+        linkToAnswer: 'https://sandeepkdasari.hashnode.dev/javascript-qa#heading-q1-what-is-hoisting-in-hoisting-in-javascript-is-a-mechanism-where-variable-and-function-declarations-are-moved-to-the-top-of-their-respective-scopes-during-the-compilation-phase-before-the-code-is-executed-essentially-its-as-if-the-declarations-are-physically-moved-to-the-top-of-the-code'
     },
     {
         questionText: `Q.2 What are different higher order functions in JS? What is the difference between .map()
@@ -50,6 +50,6 @@ export const jsQNA = [
     },{
         questionText: 'Q.12 Create a Blog web app using JavaScript',
         subQuestions: ['Fetch data from https://jsonplaceholder.typicode.com/posts and show it to ui', 'User can also add new blog', 'Add Delete functionality also'],
-        linkToAnswer: 'http://pleasureblogging.fsjs2.0.sandeep.fun/'
+        linkToAnswer: 'https://github.com/sandeepkdasari143/blog-app-DOM'
     },
 ]
