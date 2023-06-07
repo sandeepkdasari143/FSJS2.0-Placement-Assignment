@@ -1,8 +1,6 @@
-import React from 'react'
 import SandeepImage from '../../assets/SandeepKDasari.jpeg'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import { IconButton } from '@mui/material';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { Link } from 'react-router-dom';
